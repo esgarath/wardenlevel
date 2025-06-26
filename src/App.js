@@ -540,6 +540,7 @@ const ProfessionTracker = () => {
               <span
                 key={tier}
                 className={`px-1.5 py-0.5 rounded text-white text-xs ${info.color}`}
+              
               >
                 {info.name}
               </span>
@@ -565,7 +566,7 @@ const ProfessionTracker = () => {
         <span className="text-xs">•</span>
         <span className="text-xs">Updated {formatTime(lastUpdate)}</span>
       </div>
-    );
+    );if (tier === 5) return { tier: 5, color: "bg-yellow-500", name: "T5" };
   };
 
   const RecentChanges = () =>
