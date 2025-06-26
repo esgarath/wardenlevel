@@ -118,7 +118,7 @@ const ProfessionTracker = () => {
     if (tier === 2) return { tier: 2, color: "bg-green-700", name: "T2" };
     if (tier === 3) return { tier: 3, color: "bg-blue-700", name: "T3" };
     if (tier === 4) return { tier: 4, color: "bg-purple-700", name: "T4" };
-    if (tier === 5) return { tier: 5, color: "bg-yellow-500 text-black", name: "T5" };
+    if (tier === 5) return { tier: 5, color: "bg-yellow-500", name: "T5" };
     if (tier === 6) return { tier: 6, color: "bg-indigo-700", name: "T6" };
     if (tier === 7) return { tier: 7, color: "bg-red-700", name: "T7" };
     if (tier === 8) return { tier: 8, color: "bg-pink-700", name: "T8" };
@@ -207,6 +207,7 @@ const ProfessionTracker = () => {
 
     const player = players.find((p) => p.id === id);
     if (!player) return;
+
 
     const updatedPlayer = { ...player, online: !player.online };
     await updatePlayer(updatedPlayer);
@@ -515,7 +516,7 @@ const ProfessionTracker = () => {
                   </select>
                 ) : (
                   <div
-                    className={`px-2 py-1 rounded text-sm font-medium ${tierInfo.color} w-10 text-center`}
+                    className={`px-2 py-1 rounded text-white text-sm font-medium ${tierInfo.color} w-10 text-center`}
                   >
                     {tier === 0 ? "-" : `T${tier}`}
                   </div>
@@ -538,7 +539,7 @@ const ProfessionTracker = () => {
             return (
               <span
                 key={tier}
-                className={`px-1.5 py-0.5 rounded text-xs ${info.color}`}
+                className={`px-1.5 py-0.5 rounded text-white text-xs ${info.color}`}
               >
                 {info.name}
               </span>
