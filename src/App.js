@@ -112,12 +112,12 @@ const ProfessionTracker = () => {
   const getTierInfo = (tier) => {
     if (!tier || tier === 0)
       return { tier: 0, color: "bg-gray-400", name: "No Tier" };
-    if (tier === 1) return { tier: 1, color: "bg-gray-600", name: "T1" };
+    if (tier === 1) return { tier: 1, color: "bg-gray-700", name: "T1" };
     if (tier === 2) return { tier: 2, color: "bg-green-700", name: "T2" };
     if (tier === 3) return { tier: 3, color: "bg-blue-700", name: "T3" };
     if (tier === 4) return { tier: 4, color: "bg-purple-700", name: "T4" };
     if (tier === 5) return { tier: 5, color: "bg-yellow-700", name: "T5" };
-    if (tier === 6) return { tier: 6, color: "bg-orange-800", name: "T6" };
+    if (tier === 6) return { tier: 6, color: "bg-indigo-700", name: "T6" };
     if (tier === 7) return { tier: 7, color: "bg-red-700", name: "T7" };
     if (tier === 8) return { tier: 8, color: "bg-pink-700", name: "T8" };
     if (tier === 9) return { tier: 9, color: "bg-black", name: "T9" };
